@@ -17,5 +17,5 @@ Order robots from RobotSpareBin Industries
 *** Keywords ***
 Open RobotSpareBin Industries website
     Open Available Browser    https://robotsparebinindustries.com/#/robot-order
-
+    
    
