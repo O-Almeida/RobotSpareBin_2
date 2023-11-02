@@ -7,15 +7,22 @@ Documentation     Orders robots from RobotSpareBin Industries Inc.
 ...    
 Library    RPA.Browser.Selenium    auto_close=${False}
 Library    RPA.HTTP
+Library    RPA.JavaAccessBridge
 
 *** Tasks ***
 Order robots from RobotSpareBin Industries
     Open RobotSpareBin Industries website
-    
+    Close initial modal
+    Download orders excel file
     
 
 *** Keywords ***
 Open RobotSpareBin Industries website
     Open Available Browser    https://robotsparebinindustries.com/#/robot-order
-    
+
+Close initial modal
+    Click Button    OK
+
+Download orders excel file
+    Download    https://robotsparebinindustries.com/orders.csv    overwrite=${True}
    
